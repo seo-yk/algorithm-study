@@ -10,11 +10,10 @@ def solution(numbers, target):
                 answer += 1
             return
         
-        if not visited[start]:
-            visited[start] = True
-            dfs(sum-numbers[start], start+1)
-            dfs(sum+numbers[start], start+1)
-            visited[start] = False
+        dfs(sum-numbers[start], start+1)
+        dfs(sum+numbers[start], start+1)
+        
+
             
     dfs(0, 0)
     return answer
