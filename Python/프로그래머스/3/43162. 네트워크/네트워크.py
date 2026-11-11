@@ -14,7 +14,7 @@ def solution(n, computers):
             cur = q.popleft()
             
             for next in range(n):
-                if cur != next and not visited[next] and computers[cur][next] == 1:
+                if not visited[next] and computers[cur][next] == 1:
                     visited[next] = True
                     q.append(next)
                         
